@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import InitialScreen from './components/InitialScreen';
 import RejectionScreen from './components/RejectionScreen';
 import MainScreen from './components/MainScreen';
 import LetterScreen from './components/LetterScreen';
+import songFile from './assets/media/song.mp3';
 
 function App() {
   const [screen, setScreen] = useState('initial');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio(songFile));
 
   const handleAccept = () => {
     setScreen('main');
@@ -28,6 +31,25 @@ function App() {
   const handleBackToMain = () => {
     setScreen('main');
   };
+
+  const handleVinylClick = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  // Cleanup audio on unmount
+  React.useEffect(() => {
+    const audio = audioRef.current;
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
 
   return (
     <div className="App">
@@ -51,6 +73,8 @@ function App() {
           <MainScreen 
             key="main"
             onOpenLetter={handleOpenLetter}
+            isPlaying={isPlaying}
+            onVinylClick={handleVinylClick}
           />
         )}
 

@@ -6,12 +6,9 @@ import cassetteImg from '../assets/images/cassette.png';
 import envelopeImg from '../assets/images/envelope.png';
 import vinylImg from '../assets/images/vinyl.png';
 import videoFile from '../assets/media/video.mp4';
-import songFile from '../assets/media/song.mp3';
 
-const MainScreen = ({ onOpenLetter }) => {
+const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick }) => {
   const [showVideo, setShowVideo] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [audioElement] = useState(new Audio(songFile));
 
   const handleCassetteClick = () => {
     setShowVideo(true);
@@ -20,24 +17,6 @@ const MainScreen = ({ onOpenLetter }) => {
   const handleCloseVideo = () => {
     setShowVideo(false);
   };
-
-  const handleVinylClick = () => {
-    if (isPlaying) {
-      audioElement.pause();
-      setIsPlaying(false);
-    } else {
-      audioElement.play();
-      setIsPlaying(true);
-    }
-  };
-
-  // Cleanup audio on unmount
-  React.useEffect(() => {
-    return () => {
-      audioElement.pause();
-      audioElement.currentTime = 0;
-    };
-  }, [audioElement]);
 
   return (
     <motion.div 
@@ -92,7 +71,7 @@ const MainScreen = ({ onOpenLetter }) => {
           className="element vinyl"
           whileHover={{ scale: 1.1, rotate: 5 }}
           whileTap={{ scale: 0.95 }}
-          onClick={handleVinylClick}
+          onClick={onVinylClick}
           animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
           transition={isPlaying ? { duration: 2, repeat: Infinity, ease: "linear" } : {}}
         >
