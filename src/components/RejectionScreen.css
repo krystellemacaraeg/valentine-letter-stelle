@@ -1,0 +1,42 @@
+.rejection-screen {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.plea-text {
+  font-size: 2.5rem;
+  color: #c41e3a;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.plea-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.back-button {
+  margin-top: 2rem;
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background-color: #a01628;
+  box-shadow: 0 7px 20px rgba(196, 30, 58, 0.4);
+}

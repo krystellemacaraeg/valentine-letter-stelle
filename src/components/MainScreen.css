@@ -1,0 +1,172 @@
+.main-screen {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+.flowers-title {
+  font-size: 3rem;
+  color: #c41e3a;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.flowers-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cat-flowers-gif {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.2);
+}
+
+.interactive-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.element {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.element img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+  margin-bottom: 0.5rem;
+}
+
+.cassette img {
+  width: 150px;
+  height: 150px;
+}
+
+.vinyl img {
+  width: 145px;
+  height: 145px;
+}
+
+.envelope {
+  position: relative;
+}
+
+.envelope img {
+  width: 200px;
+  height: 200px;
+}
+
+.envelope-hint {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  max-width: 200px;
+}
+
+/* Video Modal */
+/* Video Modal */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  background: linear-gradient(135deg, #ffffff 0%, #ffe0e0 100%);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 5px solid #c41e3a;
+}
+
+.close-video {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #c41e3a;
+  color: white;
+  border: 3px solid white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-video:hover {
+  background-color: #a01628;
+  transform: scale(1.1) rotate(90deg);
+}
+
+.video-player {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(196, 30, 58, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .flowers-title {
+    font-size: 2.2rem;
+  }
+  
+  .cat-flowers-gif {
+    width: 250px;
+    height: 250px;
+  }
+
+  .element {
+    min-height: 180px;
+  }
+  
+  .element img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cassette img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .vinyl img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .envelope img {
+    width: 120px;
+    height: 120px;
+  }
+}
