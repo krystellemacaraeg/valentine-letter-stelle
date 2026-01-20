@@ -134,7 +134,7 @@
   margin-bottom: 0.5rem;
   font-size: 1.15rem;
   text-align: center;
-  text-indent: 0;
+  text-indent: 0 !important;
 }
 
 .signature {
@@ -199,11 +199,11 @@
 
 @media (max-width: 600px) {
   .letter-container {
-    padding: 10px;
+    padding: 5px;
   }
 
   .letter-paper {
-    padding: 70px 25px 50px 25px;
+    padding: 70px 35px 50px 35px;
   }
 
   .cat-sticker {
@@ -219,7 +219,6 @@
   .letter-content p {
     font-size: 0.95rem;
     text-indent: 1.5em;
-    text-align: left;
   }
 
   .signature {
@@ -252,8 +251,12 @@
 }
 
 @media (max-width: 480px) {
+  .letter-container {
+    padding: 3px;
+  }
+
   .letter-paper {
-    padding: 60px 20px 45px 20px;
+    padding: 60px 25px 45px 25px;
   }
 
   .cat-sticker {
