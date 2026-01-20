@@ -77,6 +77,18 @@
   max-width: 200px;
 }
 
+.instruction-note {
+  margin-top: 2.5rem;
+  font-size: 1.05rem;
+  color: #c41e3a;
+  font-style: italic;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
 /* Video Modal */
 .video-modal {
   position: fixed;

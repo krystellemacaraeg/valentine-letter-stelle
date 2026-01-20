@@ -79,6 +79,15 @@ const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick }) => {
         </motion.div>
       </motion.div>
 
+      <motion.p 
+        className="instruction-note"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+      >
+        Please play the vinyl as you read the letter inside the envelope.
+      </motion.p>
+
       {/* Video Modal */}
       {showVideo && (
         <motion.div 
