@@ -73,7 +73,7 @@ const LetterScreen = ({ onBack, onBackToInitial }) => {
             <p className="valentine-text">Happy Valentine's Day, Baby.</p>
 
             <div className="signature">
-              Yours,<br/>Stelle<br/><br/>
+              Yours,<br/>Stelle<br/><br/><br />
             </div>
           </motion.div>
 
