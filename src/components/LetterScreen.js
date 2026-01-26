@@ -6,7 +6,7 @@ import cat2 from '../assets/images/cat2.jpg';
 import cat3 from '../assets/images/cat3.jpg';
 import cat4 from '../assets/images/cat4.jpg';
 
-const LetterScreen = ({ onBack }) => {
+const LetterScreen = ({ onBack, onBackToInitial }) => {
   return (
     <motion.div 
       className="letter-screen"
@@ -16,6 +16,10 @@ const LetterScreen = ({ onBack }) => {
     >
       <button className="back-button-letter" onClick={onBack}>
         ←
+      </button>
+
+      <button className="home-button-letter" onClick={onBackToInitial}>
+        🏠
       </button>
 
       <motion.div 
@@ -46,23 +50,27 @@ const LetterScreen = ({ onBack }) => {
           >
             <h2 className="letter-title">To My Love,</h2>
             
-            <p>I hope this reaches you at a moment when your mind is calm and your heart has a little space to rest. I was thinking of you again, and I felt the need to put my thoughts into words. You have a way of slipping into my day so easily. Even the smallest thought of you makes everything feel warmer.</p>
+            <p>I hope you read this at a moment when your mind is calm enough to handle the truth, which is that you have been living rent-free in my thoughts all day again. I was going through my day like a normal, responsible human being (BAHAHAHAH), then you wandered into my thoughts and refused to leave. You really have no idea how easily you do that to me. It feels like it should be illegal.</p>
 
-            <p>I like knowing you. I like learning the small things about you, the things you do not always say out loud. You have this quiet charm that pulls me in, and every day I find something new about you that I want to hold close. You have no idea how often I smile because of you.</p>
+            <p>I like knowing you. Every small thing you reveal, especially the ones you do not say out loud, pulls me in even more. There is something about you that keeps me curious and wanting to learn all the parts you do not show to everyone. You make me smile so often it is almost unfair how easily you get to me. </p>
 
-            <p>I know life gets heavy for you at times. I know some days feel long and tiring. When you tell me even a bit of what you go through, I feel honored that you trust me with it. You do not have to be strong all the time. You do not have to hide the parts of yourself that feel worn out. I want to be someone who can listen, someone who can make your days softer, even just a little.</p>
+            <p>I know your days can feel heavy. I know the long hours and the pressure weigh on you. Whenever you share even a glimpse of what you are carrying, I feel lucky that you trust me with it. You never have to pretend with me. You never have to force that strength you show the world. I want the real you, even the tired parts, even the parts you think you should hide. They are still you, and I want every single piece.</p>
 
-            <p>If I could sit beside you right now, I would. I would hold you for a moment and let you rest your mind. I would trace my fingers along your arm, slow and gentle, until you feel the world ease up. I would let you lean into me and forget the noise around you. One day I hope I get to do that for real. Until then, I am here in the ways I can be.</p>
+            <p>And if I could be with you right now, I would walk straight up to you and pull you against me, just close enough for you to feel every bit of attention I have on you. I would brush my fingers along your arm, slow and deliberate, just to see the exact moment your breath softens. I would lean in, let my lips hover near yours for a second longer than necessary, and kiss you gently, the kind of kiss that tells you to forget everything else for a moment and focus only on me. I would let you rest your forehead against mine, let you feel how steady I am for you, and let the world fall away until it is just the two of us in that quiet space. (Yes, I read a lot of fanfictions. How could you tell?)</p>
 
-            <p>I love it when you share pieces of your day with me. It makes me feel connected to your world. It makes me feel like I am not far from you at all. You do not have to pretend with me. I want you real. I want you as you are, with your tired moments, your unfiltered thoughts, your soft parts, and your quiet hopes.</p>
+            <p>One day, I plan to give you that moment for real. Until then, I am here in every way I can be, wanting you, thinking of you, and imagining the way you would melt into me when you finally let yourself.</p>
 
-            <p>You are someone I am truly glad to have met. You are someone who makes my days brighter without even trying. And the more I get to know you, the more I want to be close to you, in every sense of the word.</p>
+            <p>I love it when you tell me about your day. It makes me feel close to you, close enough that the distance feels almost irrelevant. You never need to soften or shape your words for me. I want the parts you guard, the parts you reveal, and everything in between. I want you exactly as you are.</p>
 
-            <p>You deserve care. You deserve peace. You deserve to be held with warmth and patience. I hope you let yourself feel those things, from me and from the world around you.</p>
+            <p>Meeting you is something I am genuinely grateful for. You pull me in without even trying, and the more I learn about you, the more I want to be near you. In every sense of the word.</p>
 
             <p>Thank you for being part of my days. Thank you for letting me into your life in the way you do.</p>
 
-            <p>Every quiet moment I have, it is you I end up thinking about.</p>
+            <p>You deserve warmth. You deserve care. You deserve someone who holds you with patience, affection, and a little bit of hunger too. I hope you let yourself feel those things, especially from me.</p>
+
+            <p>Thank you for being part of my days. Thank you for letting me into your life in ways I did not expect but definitely want more of.</p>
+
+            <p>Every quiet moment I have, you show up in my mind like you own the place. I tell myself to focus, but I never really want to. (:P)</p>
 
             <p className="valentine-text">Happy Valentine's Day, Baby.</p>
 

@@ -7,7 +7,7 @@ import envelopeImg from '../assets/images/envelope.png';
 import vinylImg from '../assets/images/vinyl.png';
 import videoFile from '../assets/media/video.mp4';
 
-const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick }) => {
+const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick, onBackToInitial }) => {
   const [showVideo, setShowVideo] = useState(false);
 
   const handleCassetteClick = () => {
@@ -25,6 +25,11 @@ const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      {/* Home Button */}
+      <button className="home-button" onClick={onBackToInitial}>
+        🏠
+      </button>
+
       <motion.h1 
         className="flowers-title"
         initial={{ y: -50, opacity: 0 }}
@@ -85,7 +90,7 @@ const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
-        Please play the vinyl as you read the letter inside the envelope.
+        Please play the vinyl as you read <br />the letter inside the envelope.
       </motion.p>
 
       {/* Video Modal */}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import InitialScreen from './components/InitialScreen';
@@ -8,9 +8,18 @@ import LetterScreen from './components/LetterScreen';
 import songFile from './assets/media/song.mp3';
 
 function App() {
-  const [screen, setScreen] = useState('initial');
+  // Load screen state from localStorage, default to 'initial'
+  const [screen, setScreen] = useState(() => {
+    return localStorage.getItem('currentScreen') || 'initial';
+  });
+  
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio(songFile));
+
+  // Save screen state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('currentScreen', screen);
+  }, [screen]);
 
   const handleAccept = () => {
     setScreen('main');
@@ -43,7 +52,7 @@ function App() {
   };
 
   // Cleanup audio on unmount
-  React.useEffect(() => {
+  useEffect(() => {
     const audio = audioRef.current;
     return () => {
       audio.pause();
@@ -75,6 +84,7 @@ function App() {
             onOpenLetter={handleOpenLetter}
             isPlaying={isPlaying}
             onVinylClick={handleVinylClick}
+            onBackToInitial={handleBack}
           />
         )}
 
@@ -82,6 +92,7 @@ function App() {
           <LetterScreen 
             key="letter"
             onBack={handleBackToMain}
+            onBackToInitial={handleBack}
           />
         )}
       </AnimatePresence>

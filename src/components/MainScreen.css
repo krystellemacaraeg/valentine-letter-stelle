@@ -3,6 +3,34 @@
   max-width: 600px;
   width: 100%;
   padding: 20px;
+  padding-bottom: 40px; /* Add extra padding at bottom */
+  position: relative;
+}
+
+/* Home Button */
+.home-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #c41e3a;
+  color: white;
+  border: 3px solid white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-button:hover {
+  background-color: #a01628;
+  transform: scale(1.1);
 }
 
 .flowers-title {
@@ -79,6 +107,7 @@
 
 .instruction-note {
   margin-top: 2.5rem;
+  margin-bottom: 2rem; /* Add margin bottom */
   font-size: 1.05rem;
   color: #c41e3a;
   font-style: italic;
@@ -87,6 +116,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  padding: 0 20px; /* Add horizontal padding */
 }
 
 /* Video Modal */
@@ -179,6 +209,18 @@
     width: 140px;
     height: 140px;
   }
+
+  .instruction-note {
+    font-size: 1rem;
+  }
+
+  .home-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    top: 20px;
+    left: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -203,5 +245,18 @@
   .envelope img {
     width: 120px;
     height: 120px;
+  }
+
+  .instruction-note {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+
+  .home-button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    top: 15px;
+    left: 15px;
   }
 }
