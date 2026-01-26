@@ -64,8 +64,6 @@ const LetterScreen = ({ onBack, onBackToInitial }) => {
 
             <p>Meeting you is something I am genuinely grateful for. You pull me in without even trying, and the more I learn about you, the more I want to be near you. In every sense of the word.</p>
 
-            <p>Thank you for being part of my days. Thank you for letting me into your life in the way you do.</p>
-
             <p>You deserve warmth. You deserve care. You deserve someone who holds you with patience, affection, and a little bit of hunger too. I hope you let yourself feel those things, especially from me.</p>
 
             <p>Thank you for being part of my days. Thank you for letting me into your life in ways I did not expect but definitely want more of.</p>
