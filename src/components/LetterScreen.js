@@ -50,7 +50,7 @@ const LetterScreen = ({ onBack, onBackToInitial }) => {
           >
             <h2 className="letter-title">To My Love,</h2>
             
-            <p>I hope you read this at a moment when your mind is calm enough to handle the truth, which is that you have been living rent-free in my thoughts all day again. I was going through my day like a normal, responsible human being (BAHAHAHAH), then you wandered into my thoughts and refused to leave. You really have no idea how easily you do that to me. It feels like it should be illegal.</p>
+            <p>I hope you read this at a moment when your mind is calm enough to handle the truth, which is that you have been living rent-free in my thoughts all day again. I was going through my day like a normal, responsible human being, (BAHAHAHAH) then you wandered into my thoughts and refused to leave. You really have no idea how easily you do that to me. It feels like it should be illegal.</p>
 
             <p>I like knowing you. Every small thing you reveal, especially the ones you do not say out loud, pulls me in even more. There is something about you that keeps me curious and wanting to learn all the parts you do not show to everyone. You make me smile so often it is almost unfair how easily you get to me. </p>
 
