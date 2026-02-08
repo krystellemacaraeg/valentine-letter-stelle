@@ -90,7 +90,6 @@ const MainScreen = ({ onOpenLetter, isPlaying, onVinylClick, onBackToInitial }) 
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
-        Please play the vinyl as you read <br />the letter inside the envelope.
       </motion.p>
 
       {/* Video Modal */}
