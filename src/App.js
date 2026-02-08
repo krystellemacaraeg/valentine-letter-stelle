@@ -5,7 +5,7 @@ import InitialScreen from './components/InitialScreen';
 import RejectionScreen from './components/RejectionScreen';
 import MainScreen from './components/MainScreen';
 import LetterScreen from './components/LetterScreen';
-import songFile from './assets/media/song.mp3';
+import songFile from './assets/media/song.m4a';
 
 function App() {
   // Load screen state from localStorage, default to 'initial'
